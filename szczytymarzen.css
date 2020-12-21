@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap');
+
+:root {
+--color-main: #1abc9c;
+--color-light: #f0f3f3;
+--color-dark: #384646;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width:100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    height: 100%;
+    color: var(--color-dark)
+}
+
+nav {
+  text-align: center;
+  position: fixed;
+  width:100%;
+  z-index: 9999;
+  background-color: white;
+}
+
+nav a {
+    width: 15%;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 10px;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 10px;
+}
+
+nav a :hover {
+
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-family:'Nunito', sans-serif;
+    background-image: url('img/goryilas.jpg');
+    background-attachment: fixed;
+    width: 100%;
+    /* height: 80vh; */
+    height: 500px;
+    padding: 0 20px;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: var(--color-dark) 5px 5px 5px;
+    line-height: 1.1;
+}
+
+h1.header {
+    max-width: 80vw;
+    padding-top: 200px;
+    font-weight: 900;   
+    font-size: 5rem;
+    
+  }
+h3.header {
+    max-width: 80vw;
+    padding-top: 10px;
+    font-weight: 300;
+    font-size: 2rem;
+}
+  
+section {
+    padding: 50px 0;
+    
+  }
+  
+.container {
+    width: 80vw;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  
+.section-title {
+    position: relative;
+    margin: 0 0 60px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+  
+.section-title:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100px;
+    height: 5px;
+    background: var(--color-main);
+    left: 50%;
+    bottom: -16px;
+    margin-left: -50px;  
+  }
+
+.about {
+    background-color: var(--color-light);
+}
+
+.peaks-wrapper {
+    display: flex;
+    margin: 0 20px;
+}
+
+.peaks-item {
+    flex: 0 0 33.333333%;
+    justify-content: space-between;
+    padding: 10px 15px;
+    max-width: 33,3333333333333%;
+    text-align: center;
+}
+
+.peaks-item i {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    line-height: 100px;
+    font-size: 3rem;
+    background-color: var(--color-main);
+    color: var(--color-light);
+    border-radius: 20%;
+    box-shadow: var(--color-dark) 5px 5px 5px;
+}
+
+.peaks-item i:hover {
+
+}
+
+p.peaks-item {
+    font-size: 0.9rem;
+}
+
+.sentence {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/tatry4.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.sentence:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    }
+
+.sentence p {
+    width: 80%;
+    position: absolute;
+    /* top: 45%; */
+    font-size: 1.6rem;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: var(--color-dark) 5px 5px 5px;
+    padding: 15px;
+    font-style: italic;
+}
+
+.mountains-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 72px 0 0 0
+    }
+    
+.mountains-item{
+    position: relative;
+    margin: 0;
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+    }
+    
+.mountains-item img {
+    display: block;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    }
+    
+.mountains-item:before {
+    position: absolute;
+    display: none;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    }
+    
+.mountains-item figcaption {
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: white;
+    }
+    
+.mountains-item:hover:before, .mountains-item:hover figcaption {
+    display: block;
+    }
+
+.wkt-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 72px 0 0 0;
+    }
+
+.wkt-item{
+    position: relative;
+    margin: 0;
+    flex: 0 0 33.33333333333333%;
+    max-width: 33.333333333333%;
+    text-align: center;
+    }
+
+.wkt-item img {
+    display: block;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+      }
+
+/* img.not {
+    filter: blur(2px);
+} */
+
+/* div.not {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: darkgray;
+    opacity: 0.8;
+    } */
+
+.wkt-item figcaption {
+    position: absolute;
+    /* display: none; */
+    width: 100%;
+    /* top: 50%; */
+    bottom: 0;
+    padding: 5px 0;
+    transform: translateY(-50%);
+    color: white;
+    background-color: rgba(0,0,0,0.6)
+}
+
+.card .front {
+    transform: perspective(900px) rotateY(0deg);
+  }
+  
+  .card .back {
+    transform: perspective(900px) rotateY(180deg);
+  }
+  
+  .card:hover .front {
+    transform: perspective(900px) rotateY(-180deg);
+  }
+  
+  .card:hover .back {
+    transform: perspective(900px) rotateY(0deg);
+  }
+
+/* .wkt-item:hover:before, .wkt-item:hover figcaption {
+    display: block;
+} */
+
+.contact-form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+
+.contact-item {
+    width: 100%;
+    margin: 20px 0;
+}
+
+#pole {
+    height: 50px;
+}
+
+#button {
+    padding: 15px 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--color-main);
+    border-radius: 10px;
+    border: none;
+    box-shadow: var(--color-dark) 5px 5px 5px;
+
+}
+
+.social-links {
+    list-style-type: none; 
+    padding: 0;
+    text-align: center;
+  }
+  
+  .social-links li {
+    display: inline-block; 
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  
+  .social-links li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    background-color: var(--color-main);
+    border-radius: 50%;
+    box-shadow: var(--color-dark) 5px 5px 5px; 
+    transition: 0.5s;
+  }
+  
+  .social-links li a:hover {
+    background-color: white;
+    color: var(--color-main);
+    transform: scale(1.2);
+  }
+
+  footer {
+      background-color: var(--color-dark);
+      width:100%;
+      height: 50px;
+      padding: 5px;
+  }
+
+  footer p {
+      color: white;
+      text-align: center;
+      font-weight: 300;
+      font-size: 0.9rem;
+      line-height: 50px;
+  }
+  
+  @media (max-width: 768px) {
+
+    nav {
+        display: none;
+    }
+
+    h1.header {
+        padding-top: 20vh;
+        font-size: 350%;
+        
+      }
+    h3.header {
+        font-size: 130%;
+    }
+
+    .section-title {
+        font-size: 200%;
+    }
+
+    .mountains-item, .wkt-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+  }
+  
+
+  @media (max-width: 576px) {
+
+    .sentence p {
+        top: 25%;
+    }
+
+    .peaks-wrapper, .mountains-wrapper, .wkt-wrapper {
+        display: block;
+    }
+
+    .peaks-item, .mountains-item, .wkt-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+    }
+
+    .social-links li {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .social-links li a {
+        font-size: 2.5rem;
+    }
+
+
+
+
+
+
+
+  }
+
+
+    
