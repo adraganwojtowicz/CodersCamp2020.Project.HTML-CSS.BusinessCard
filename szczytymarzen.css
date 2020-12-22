@@ -1,6 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap');
 
@@ -89,16 +86,15 @@ header {
 
 h1.header {
     max-width: 80vw;
-    /* padding-top: 200px; */
     font-weight: 900;
     font-size: 5rem;
 }
 
 h3.header {
     max-width: 80vw;
-    /* padding-top: 10px; */
     font-weight: 300;
     font-size: 2rem;
+    line-height: 1.2;
 }
 
 section {
@@ -183,7 +179,7 @@ p.peaks-item {
     background-position: center center;
 }
 
-.sentence:before {
+.sentence::before {
     position: absolute;
     content: '';
     left: 0;
@@ -419,16 +415,26 @@ div.back {
 footer {
     background-color: var(--color-dark);
     width: 100%;
-    height: 50px;
-    padding: 5px;
+    height: 60px;
 }
 
-footer p {
+p.footer {
+    padding: 10px;
     color: white;
     text-align: center;
     font-weight: 300;
     font-size: 0.9rem;
     line-height: 50px;
+}
+
+@media (max-width: 960px) {
+    h1.header {
+        font-size: 4rem;
+    }
+
+    h3.header {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 900px) {
@@ -444,21 +450,20 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    nav.desktop {
-        display: none;
+    nav.desktop, nav.desktop a::before {
+         display: none;
     }
 
     nav.mobile {
         position: absolute;
         right:0;
         left:0;
-        top: -320px;
+        top: -350px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
         background-color: white;
-        transition: 1s linear;
     }
     
     nav.mobile a {
@@ -468,14 +473,14 @@ footer p {
         color: var(--color-dark);
         text-transform: uppercase;
         font-weight: 300;
-        padding: 10px;
+        margin: 0;
         font-size: 1.2rem;
         letter-spacing: 1px;
         text-align: center;
         transition: 0.5s;
     }
     
-    nav.mobile a :hover {
+    nav.mobile a:hover {
         background-color: var(--color-main);
         color: white;
     }
@@ -488,30 +493,28 @@ footer p {
         color: var(--color-dark);
         text-align: center;
         background-color: white;
-        transition: 0.5s linear;
+        transition: 1s;
     }
 
     #burger:hover {
         cursor: pointer;   
     }
     
-
-    #burger:hover+nav.mobile {
-        top: 80px;
+    #burger:hover~nav.mobile, nav.mobile:hover {
+        top: 72px;
     }
 
     h1.header {
-        padding-top: 20vh;
-        font-size: 350%;
-
+        /* padding-top: 20vh; */
+        font-size: 3.5rem;
     }
 
     h3.header {
-        font-size: 130%;
+        font-size: 1.3rem;
     }
 
     .section-title {
-        font-size: 200%;
+        font-size: 2rem;
     }
 
     .mountains-item,
@@ -520,7 +523,6 @@ footer p {
         max-width: 50%;
     }
 }
-
 
 @media (max-width: 576px) {
 
@@ -539,7 +541,6 @@ footer p {
     .wkt-item {
         flex: 0 0 100%;
         max-width: 100%;
-
     }
 
     .social-links li {
@@ -551,11 +552,4 @@ footer p {
     .social-links li a {
         font-size: 2.5rem;
     }
-
-
-
-
-
-
-
 }
