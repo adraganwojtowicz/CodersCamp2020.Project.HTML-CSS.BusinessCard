@@ -27,7 +27,9 @@ html {
     color: var(--color-dark)
 }
 
-nav {
+nav.desktop {
+    display: flex;
+    justify-content: center;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -35,21 +37,21 @@ nav {
     background-color: white;
 }
 
-nav a {
+nav.desktop a {
     width: 15%;
-    display: inline-block;
+    /* display: inline-block; */
     text-decoration: none;
     color: var(--color-dark);
     text-transform: uppercase;
     font-weight: 300;
     padding: 10px;
-    transition: 0.5s;
     letter-spacing: 1px;
     text-align: center;
     margin: 10px;
+    transition: 0.5s;
 }
 
-nav a :hover {}
+nav.desktop a :hover {}
 
 header {
     position: relative;
@@ -64,7 +66,7 @@ header {
     height: 500px;
     padding: 0 20px;
     background-size: cover;
-    background-position: center center;
+    background-position: bottom center;
     color: white;
     text-align: center;
     text-transform: uppercase;
@@ -260,7 +262,7 @@ p.peaks-item {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0);
     padding: 10px 25px;
-    cursor: help;
+    cursor: pointer;
     clip-path: circle(5% at 89% 15%);
     transition: background-color 500ms ease-in-out, clip-path 500ms ease-in-out;
 }
@@ -417,11 +419,89 @@ footer p {
     line-height: 50px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    nav.desktop a {
+        font-size: 0.8rem;
+    }
+}
 
-    nav {
+@media (min-width: 769px) {
+    .burger-area, .burger {
         display: none;
     }
+}
+
+@media (max-width: 768px) {
+
+    nav.desktop {
+        display: none;
+    }
+
+    nav.mobile {
+        position: absolute;
+        right:0;
+        left:0;
+        top: -300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        transition: .5s linear;
+    }
+    
+    nav.mobile a {
+        width: 100%;
+        display:block;
+        text-decoration: none;
+        color: var(--color-dark);
+        text-transform: uppercase;
+        font-weight: 300;
+        padding: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+        transition: 0.5s;
+    }
+    
+    nav.mobile a :hover {}
+
+    .burger-area {
+        /* display: flex; */
+        position: fixed;
+        /* justify-content: center;
+        align-items: center; */
+        top: 0;
+        width: 100vw;
+        height: 80px;
+        background-color: white;
+        z-index: 9999;
+    }
+
+
+    .burger {
+        position: fixed;
+        font-size: 40px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        border: 2px solid var(--color-dark);
+        background-color: #fff;
+        transition: .3s linear;
+        z-index: 9999;
+    }
+    
+    .burger:hover {
+        cursor: pointer;
+        transform: rotate(405deg);
+    }
+
+    .burger:hover+nav.mobile {
+        top: 80px;
+    }
+
+
 
     h1.header {
         padding-top: 20vh;
